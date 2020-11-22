@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson3</title>
+</head>
+<body>
+	<script>
+		var sum = +prompt("Укажите сумму вклада");
+		var percent = +prompt("Укажите процент вклада");
+		var yearNumber =5;
+		for (var i=1; yearNumber >= i; i++){
+   var rub = (sum/100*percent)*i;
+   document.write("За "+ i +" год вы получите " + rub+".<br>");
+   sum= sum+rub;
+   rub=0;
+		}
+	</script>
+</body>
+</html>
