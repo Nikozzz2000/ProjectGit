@@ -13,7 +13,7 @@ while(true){
 	if(userAnswerOne > answer){
         alert("1: Вы ввели слишком большое число.");
 	
-	} else (userAnswerOne < answer){
+	} else{
         alert("1: Вы ввели слишком маленькое число.");
 	
     
@@ -21,17 +21,19 @@ while(true){
 	if(userAnswerTwo > answer){
         alert("2: Вы ввели слишком большое число.");
     
-	} else (userAnswerTwo < answer){
+	} else {
         alert("2: Вы ввели слишком маленькое число.");
     }
 	
 	var userBreak = prompt("Для выхода из игры введите 'ОК'");
-    if(userBreak.toUpperCase() == "OK"){
-        alert("Вы проиграли!");
-        break;
+    if(userBreak == null || userBreak.toUpperCase() == "OK"){       
+		alert("Вы проиграли!");    
+		break;
     }
-
-    userAnswer = +prompt("Попробуйте еще раз. Введите число от 1 до 100\n У вас осталось " + (maxTryCount - tryCount) +" попыток");
+	else {
+		userAnswerOne = +prompt("Попробуйте еще раз. Введите число от 1 до 100");
+		userAnswerTwo = +prompt("Попробуйте еще раз. Введите число от 1 до 100");
+	}
 }
 
 </script>
